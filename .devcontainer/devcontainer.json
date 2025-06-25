@@ -1,0 +1,13 @@
+{
+  "name": "python-dev-container",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "postCreateCommand": "/bin/sh .devcontainer/post-create.sh",
+  "remoteUser": "vscode"
+}
