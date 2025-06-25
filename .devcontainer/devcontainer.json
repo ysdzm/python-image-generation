@@ -1,13 +1,12 @@
 {
-  "name": "python-dev-container",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "name": "python-gpu-dev-container",
+  "image": "nvidia/cuda:11.8.0-base-ubuntu22.04",
+  "runArgs": ["--gpus", "all"],
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ms-toolsai.jupyter"
-      ]
+      "extensions": ["ms-toolsai.jupyter"]
     }
   },
   "postCreateCommand": "/bin/sh .devcontainer/post-create.sh",
-  "remoteUser": "vscode"
+  "remoteUser": "root"
 }
